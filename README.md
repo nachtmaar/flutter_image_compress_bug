@@ -20,3 +20,17 @@ Find images in:
 - assets/passierte_tomaten_samsung.jpg # original image
 - apps/com.example.flutterimagecompressbug/r/app_flutter/image_compress.jpg
 - apps/com.example.flutterimagecompressbug/r/app_flutter/flutter_image_compress.jpg
+
+Here is the result after the test run:
+```bash
+➜ identify -verbose assets/passierte_tomaten_samsung.jpg|grep -i orientation
+  Orientation: RightTop
+    exif:Orientation: 6
+
+➜ identify -verbose apps/com.example.flutterimagecompressbug/r/app_flutter/image_compress.jpg|grep -i orientation
+  Orientation: RightTop
+    exif:Orientation: 6
+
+➜ identify -verbose apps/com.example.flutterimagecompressbug/r/app_flutter/flutter_image_compress.jpg |grep -i orientation
+  Orientation: Undefined
+```
